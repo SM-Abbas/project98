@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-D",
+      "2": "I-D",
+      "3": "L-D",
+      "4": "U-D",
+      "5": "B-Guwahati",
+      "6": "I-Guwahati",
+      "7": "L-Guwahati",
+      "8": "U-Guwahati",
+      "9": "B-delhi",
+      "10": "I-delhi",
+      "11": "L-delhi",
+      "12": "U-delhi",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-D": 1,
+      "I-D": 2,
+      "L-D": 3,
+      "U-D": 4,
+      "B-Guwahati": 5,
+      "I-Guwahati": 6,
+      "L-Guwahati": 7,
+      "U-Guwahati": 8,
+      "B-delhi": 9,
+      "I-delhi": 10,
+      "L-delhi": 11,
+      "U-delhi": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

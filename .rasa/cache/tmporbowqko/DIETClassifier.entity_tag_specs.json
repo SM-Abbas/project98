@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-delhi",
+      "2": "I-delhi",
+      "3": "L-delhi",
+      "4": "U-delhi",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-delhi": 1,
+      "I-delhi": 2,
+      "L-delhi": 3,
+      "U-delhi": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

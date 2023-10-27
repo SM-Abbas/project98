@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatbot</title>
+  <style>
+    .chatbot-container {
+      margin-bottom: 2%;
+      width: 300px;
+      height: 400px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background-color: #f1f1f1;
+      border: 1px solid black;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      animation: popup-chatbot 1s ease-in-out;
+    }
+
+    @keyframes popup-chatbot {
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .chatbot-header {
+      height: 50px;
+      background-color: #0000ff;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      line-height: 50px;
+    }
+
+    .chatbot-text-box {
+      
+      height: 300px;
+      overflow-y: auto;
+    }
+
+    .chatbot-input-field {
+      margin-bottom: 2%;
+      height: 40px;
+      border-radius: 5px;
+    }
+
+    .chatbot-send-button {
+      height: 40px;
+      width: 100px;
+      border-radius: 5px;
+      background-color: #0000ff;
+      color: white;
+      font-size: 20px;
+      line-height: 50px;
+    }
+
+    .chatbot-minimize-button {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: #0000ff;
+      color: white;
+      font-size: 30px;
+      line-height: 50px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbot-container">
+    <div class="chatbot-header">Chatbot</div>
+    <div class="chatbot-text-box"></div>
+    <input type="text" class="chatbot-input-field" />
+    <button class="chatbot-send-button">Send</button>
+    <button class="chatbot-minimize-button">-</button>
+  </div>
+
+  <script>
+    // Create a reference to the chatbot text box
+    const chatbotTextBox = document.querySelector('.chatbot-text-box');
+
+    // Create a function to send a message to the chatbot
+    function sendMessage() {
+      // Get the message from the input field
+      const message = document.querySelector('.chatbot-input-field').value;
+
+      // Clear the input field
+      document.querySelector('.chatbot-input-field').value = '';
+
+      // Add the message to the chatbot text box
+      chatbotTextBox.innerHTML += `<p><span class="math-inline">\{message\}</p\>\`;
+// Get the chatbot response
+// TODO\: Implement a chatbot model to generate a response to the message
+const response \= 'Chatbot response';
+// Add the chatbot response to the chatbot text box
+chatbotTextBox\.innerHTML \+\= \`<p\></span>{response}</p>`;
+
+      // Animate the chatbot text box
+      chatbotTextBox.scrollTop = chatbotTextBox.scrollHeight;
+    }
+
+    // Create a function to minimize the chatbot
+    function minimizeChatbot() {
+      // Hide the chatbot container
+      document.querySelector('.chatbot-container').style.display = 'none';
+
+      // Show the chatbot minimize button
+      document.querySelector('.chatbot-minimize-button').style.display = 'block';
+    }
+
+    // Create a function to maximize the chatbot
+    function maximizeChatbot() {
+      // Show the chatbot container
+      document.querySelector('.chatbot-container').style.display = 'block';
+
+       // Hide the chatbot container
+  document.querySelector('.chatbot-container').style.display = 'none';
+
+// Show the chatbot minimize button
+document.querySelector('.chatbot-minimize-button').style.display = 'block';
+}
+
+// Create a function to maximize the chatbot
+function maximizeChatbot() {
+// Show the chatbot container
+document.querySelector('.chatbot-container').style.display = 'block';
+
+// Hide the chatbot minimize button
+document.querySelector('.chatbot-minimize-button').style.display = 'none';
+}
+
+// Add an event listener to the minimize button
+document.querySelector('.chatbot-minimize-button').addEventListener('click', minimizeChatbot);
+
+// Add an event listener to the chatbot container to maximize it when clicked
+document.querySelector('.chatbot-container').addEventListener('click', maximizeChatbot);
